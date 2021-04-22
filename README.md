@@ -3,7 +3,7 @@
 
 # Machine Learning Framework Package
 
-This repository contains the Submodule framework for machine learning applications. It comprises different layer types, like the standard fully connected layer, activation layers (relu, sigmoid and tanh) and the dropout layer, as well as multiple optimizers, like Adam, Adagrad, Stochastic Gradient Descent, Momentum based Gradient Descent and Nesterov's accelerated Gradient Descent. All paths are relative to the project directory.
+This repository contains the Submodule framework for machine learning applications. It comprises different layer types, like the standard fully connected layer, activation layers (relu, sigmoid and tanh) and the dropout layer, as well as multiple optimizers, like Adam, Adagrad, Stochastic Gradient Descent, Momentum based Gradient Descent and Nesterov's accelerated Gradient Descent. All paths mentioned in this document are relative to the project directory.
 
 ## How to deploy our code
 1. Add this to your project using the following command `git submodule add https://gitlab2.informatik.uni-wuerzburg.de/hci/teaching/lectures/machine-learning/student-material/ws20/Team-08/_framework.git`
@@ -42,7 +42,7 @@ The corresponding source files are stored in */_framework/layers/*. Note that so
 
 ### Initialization
 
-The `class Trainer` (*/_framework/trainer.py*) provides the functionality to train a network. Therefor, the trainer has to be given a network, a losss function and an optimizer. An initialization could look like the following:
+The `class Trainer` (*/_framework/trainer.py*) provides the functionality to train a network. Therefor, the trainer has to be given a network, a loss function and an optimizer. An initialization could look like the following:
 
 `trainer = Trainer(network, cce_loss, AdamOptimizer(learning_rate, alpha))`
 
