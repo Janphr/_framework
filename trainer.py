@@ -2,7 +2,7 @@ from .utils.evaluations import *
 
 
 class Trainer():
-    def __init__(self, network, loss, optimizer, dropout):
+    def __init__(self, network, loss, optimizer, dropout=1):
         self.network = network
         self.loss = loss
         self.optimizer = optimizer
