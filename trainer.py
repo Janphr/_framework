@@ -2,11 +2,7 @@ from .utils.evaluations import *
 
 
 class Trainer():
-<<<<<<< HEAD
     def __init__(self, network, loss, optimizer, dropout=1):
-=======
-    def __init__(self, network, loss, optimizer, dropout):
->>>>>>> 618dbdf (first commit)
         self.network = network
         self.loss = loss
         self.optimizer = optimizer
@@ -50,12 +46,9 @@ class Trainer():
             # since loss is the sum of all batches
             loss = loss * (batch_size / len(x))
             losses.append(loss)
-<<<<<<< HEAD
+
             if emit:
                 emit('to_console', 'Epoch ' + str(epoch + 1) + (
-=======
-            emit('to_console', 'Epoch ' + str(epoch + 1) + (
->>>>>>> 618dbdf (first commit)
                 ' of thread ' + str(thread_nr) if thread_nr != -1 else '') + ' loss: ' + str(round(loss, 4)))
             if live_eval:
                 y, b = self.network.forward(live_eval[0])
@@ -65,12 +58,10 @@ class Trainer():
                     dyn_plotter.plt_dynamic([(losses, 'r', "train: "), (validation_losses, 'b', "validation: ")])
                 # if thread_nr != -1:
                     # plot([[(losses, l)]], "epochs", "loss", "Thread" + str(thread_nr), emit, thread_nr)
-<<<<<<< HEAD
+
                 if emit:
                     emit('save_best', {'val_loss': l, 'train_loss': loss, 'epoch': epoch, 'thread': int(thread_nr)})
-=======
-                emit('save_best', {'val_loss': l, 'train_loss': loss, 'epoch': epoch, 'thread': int(thread_nr)})
->>>>>>> 618dbdf (first commit)
+
             if self.stop:
                 break
         return losses, validation_losses
