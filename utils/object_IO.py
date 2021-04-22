@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 def get_project_root() -> str:
-    return str(Path(__file__).parent.parent)
+    return str(Path(__file__).parent.parent.parent)
 
 
 PATH = get_project_root() + '/data/trained_networks/'
